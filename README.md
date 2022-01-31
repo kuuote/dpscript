@@ -1,0 +1,6 @@
+- denopsでvimrcを書くための試み
+  - 最低限動いているだけなので何も保証できない
+- ライセンスはzlib
+- `dpscript#load(<target script>)`を叩くとスクリプトが読み込まれる
+  - スクリプトが読み込まれる際、グローバルにdenopsインスタンスが渡される
+  - Denopsサーバーは再起動することがあるので`autocmd User DenopsPluginPost:dpscript call dpscript#load(...)`で読み込むのをおすすめする
