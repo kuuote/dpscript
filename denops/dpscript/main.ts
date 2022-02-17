@@ -1,10 +1,9 @@
-import { Denops, uu } from "./deps.ts";
+import { Denops } from "https://deno.land/x/denops_std@v3.0.0/mod.ts";
 
 export function main(denops: Denops) {
   denops.dispatcher = {
     async load(target: unknown) {
-      uu.ensureString(target);
-      await import(target);
+      await import(String(target));
     },
   };
 
